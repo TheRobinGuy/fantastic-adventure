@@ -2,11 +2,19 @@ package com.example.API.Dto;
 
 public class UserDto {
 
-    private final Integer id;
-    private final String userName;
-    private final String surName;
-    private final String firstName;
-    private final Boolean gender; //True is Male, False Female
+//    private final Integer id;
+//    private final String userName;
+//    private final String surName;
+//    private final String firstName;
+//    private final Boolean gender; //True is Male, False Female
+
+    private Integer id;
+    private String userName;
+    private String surName;
+    private String firstName;
+    private Boolean gender; //True is Male, False Female
+
+    public UserDto(){}
 
     private UserDto(Builder builder) {
         this.id = builder.id;

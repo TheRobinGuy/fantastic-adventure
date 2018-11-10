@@ -5,13 +5,23 @@ import javax.persistence.*;
 @Entity
 @Table(name = "User")
 public class UserEntity {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private final Integer id;
+//    private final String userName;
+//    private final String surName;
+//    private final String firstName;
+//    private final Boolean gender; //True is Male, False Female
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final Integer id;
-    private final String userName;
-    private final String surName;
-    private final String firstName;
-    private final Boolean gender; //True is Male, False Female
+    private Integer id;
+    private String userName;
+    private String surName;
+    private String firstName;
+    private Boolean gender; //True is Male, False Female
+
+    public UserEntity(){}
 
     private UserEntity(Builder builder) {
         this.id = builder.id;
