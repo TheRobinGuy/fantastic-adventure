@@ -1,24 +1,24 @@
 package com.example.API.Dto;
 
-public class UserDto {
+public class hackerDto {
 
 //    private final Integer id;
-//    private final String userName;
+//    private final String hackerName;
 //    private final String surName;
 //    private final String firstName;
 //    private final Boolean gender; //True is Male, False Female
 
     private Integer id;
-    private String userName;
+    private String hackerName;
     private String surName;
     private String firstName;
     private Boolean gender; //True is Male, False Female
 
-    public UserDto(){}
+    public hackerDto(){}
 
-    private UserDto(Builder builder) {
+    private hackerDto(Builder builder) {
         this.id = builder.id;
-        this.userName = builder.userName;
+        this.hackerName = builder.hackerName;
         this.surName = builder.surName;
         this.firstName = builder.firstName;
         this.gender = builder.gender;
@@ -26,8 +26,8 @@ public class UserDto {
 
     public Integer getId(){ return id; }
 
-    public String getUserName() {
-        return userName;
+    public String getHackerName() {
+        return hackerName;
     }
 
     public String getSurName() {
@@ -45,7 +45,7 @@ public class UserDto {
     public static class Builder{
 
         Integer id;
-        String userName;
+        String hackerName;
         String surName;
         String firstName;
         Boolean gender; //True is Male, False Female
@@ -56,7 +56,7 @@ public class UserDto {
         }
 
         public Builder withUserName(final String userName){
-            this.userName = userName;
+            this.hackerName = userName;
             return this;
         }
 
@@ -75,8 +75,8 @@ public class UserDto {
             return this;
         }
 
-        public UserDto build(){
-            return new UserDto(this);
+        public hackerDto build(){
+            return new hackerDto(this);
         }
     }
 

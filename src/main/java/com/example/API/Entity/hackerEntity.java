@@ -4,11 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "User")
-public class UserEntity {
+public class hackerEntity {
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    private final Integer id;
-//    private final String userName;
+//    private final String hackerName;
 //    private final String surName;
 //    private final String firstName;
 //    private final Boolean gender; //True is Male, False Female
@@ -16,16 +16,16 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String userName;
+    private String hackerName;
     private String surName;
     private String firstName;
     private Boolean gender; //True is Male, False Female
 
-    public UserEntity(){}
+    public hackerEntity(){}
 
-    private UserEntity(Builder builder) {
+    private hackerEntity(Builder builder) {
         this.id = builder.id;
-        this.userName = builder.userName;
+        this.hackerName = builder.hackerName;
         this.surName = builder.surName;
         this.firstName = builder.firstName;
         this.gender = builder.gender;
@@ -35,8 +35,8 @@ public class UserEntity {
         return id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getHackerName() {
+        return hackerName;
     }
 
     public String getSurName() {
@@ -53,7 +53,7 @@ public class UserEntity {
 
     public static class Builder{
         Integer id;
-        String userName;
+        String hackerName;
         String surName;
         String firstName;
         Boolean gender; //True is Male, False Female
@@ -64,7 +64,7 @@ public class UserEntity {
         }
 
         public Builder withUserName(final String userName){
-            this.userName = userName;
+            this.hackerName = userName;
             return this;
         }
 
@@ -83,8 +83,8 @@ public class UserEntity {
             return this;
         }
 
-        public UserEntity build(){
-            return new UserEntity(this);
+        public hackerEntity build(){
+            return new hackerEntity(this);
         }
     }
 }
