@@ -71,9 +71,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/api/user/checkEmailAvailability/**")
                 .permitAll()
+                .antMatchers("/console/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated();
         // @formatter:on
+
+        //Allows the use of H2 console
+        http.headers().frameOptions().disable();
 
         // Add our custom JWT security filter
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);

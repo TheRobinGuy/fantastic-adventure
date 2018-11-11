@@ -27,7 +27,8 @@ import com.example.API.Entity.DateAudit;
     @UniqueConstraint(columnNames = { "email" }) })
 // @formatter:on
 
-public class User extends DateAudit {
+public class User {
+//  public class User extends DateAudit {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
